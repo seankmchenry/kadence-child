@@ -1,0 +1,17 @@
+/**
+ * main.css
+ */
+
+/*
+Content Area
+ */
+body.content-title-style-hide div.content-area {
+	margin-top: 0 !important;
+}
+
+/*
+Admin Bar
+ */
+#wpadminbar li#wp-admin-bar-litespeed-menu {
+  display: none;
+}

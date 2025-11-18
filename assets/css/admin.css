@@ -1,0 +1,7 @@
+/**
+ * admin.css
+ */
+
+#wpadminbar li#wp-admin-bar-litespeed-menu {
+  display: none;
+}
