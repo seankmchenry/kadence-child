@@ -1,0 +1,607 @@
+[
+    {
+        "key": "group_691a0effd1c5a",
+        "title": "Global Fields",
+        "fields": [
+            {
+                "key": "field_691a0eff3a14d",
+                "label": "Date",
+                "name": "date",
+                "aria-label": "",
+                "type": "date_picker",
+                "instructions": "Add the date here.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "display_format": "m\/d\/Y",
+                "return_format": "Ymd",
+                "first_day": 0,
+                "default_to_current_date": 1,
+                "allow_in_bindings": 0
+            },
+            {
+                "key": "field_691b4e86bbfd8",
+                "label": "Location",
+                "name": "location",
+                "aria-label": "",
+                "type": "google_map",
+                "instructions": "Add a location here.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "center_lat": "",
+                "center_lng": "",
+                "zoom": "",
+                "height": "",
+                "allow_in_bindings": 0
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "hearing"
+                }
+            ],
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "sighting"
+                }
+            ],
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "incident"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "acf_after_title",
+        "style": "seamless",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0,
+        "display_title": ""
+    },
+    {
+        "key": "group_691a903996977",
+        "title": "Incident Fields",
+        "fields": [
+            {
+                "key": "field_691a903997810",
+                "label": "Related Media",
+                "name": "related_media",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "row",
+                "pagination": 0,
+                "min": 0,
+                "max": 0,
+                "collapsed": "",
+                "button_label": "Add Media",
+                "rows_per_page": 20,
+                "sub_fields": [
+                    {
+                        "key": "field_691a99ce0cdf3",
+                        "label": "Link",
+                        "name": "link",
+                        "aria-label": "",
+                        "type": "link",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "array",
+                        "allow_in_bindings": 0,
+                        "parent_repeater": "field_691a903997810"
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "incident"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0,
+        "display_title": ""
+    },
+    {
+        "key": "group_691a24ddc20fc",
+        "title": "Sighting Fields",
+        "fields": [
+            {
+                "key": "field_691a24f709aca",
+                "label": "Text Field A",
+                "name": "text_field_a",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "maxlength": "",
+                "allow_in_bindings": 0,
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "sighting"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0,
+        "display_title": ""
+    },
+    {
+        "key": "group_691a9931169c4",
+        "title": "Whistleblower Fields",
+        "fields": [
+            {
+                "key": "field_691a993135489",
+                "label": "Incidents",
+                "name": "incidents",
+                "aria-label": "",
+                "type": "relationship",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "post_type": [
+                    "incident"
+                ],
+                "post_status": [
+                    "publish"
+                ],
+                "taxonomy": "",
+                "filters": [
+                    "search"
+                ],
+                "return_format": "object",
+                "min": 1,
+                "max": "",
+                "allow_in_bindings": 0,
+                "elements": "",
+                "bidirectional": 0,
+                "bidirectional_target": []
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "whistleblower"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0,
+        "display_title": ""
+    },
+    {
+        "key": "post_type_691a1c00149e8",
+        "title": "Hearings",
+        "menu_order": 0,
+        "active": true,
+        "post_type": "hearing",
+        "advanced_configuration": true,
+        "import_source": "",
+        "import_date": "",
+        "labels": {
+            "name": "Hearings",
+            "singular_name": "Hearing",
+            "menu_name": "Hearings",
+            "all_items": "All Hearings",
+            "edit_item": "Edit Hearing",
+            "view_item": "View Hearing",
+            "view_items": "View Hearings",
+            "add_new_item": "Add New Hearing",
+            "add_new": "Add New Hearing",
+            "new_item": "New Hearing",
+            "parent_item_colon": "Parent Hearing:",
+            "search_items": "Search Hearings",
+            "not_found": "No hearings found",
+            "not_found_in_trash": "No hearings found in Trash",
+            "archives": "Hearing Archives",
+            "attributes": "Hearing Attributes",
+            "featured_image": "",
+            "set_featured_image": "",
+            "remove_featured_image": "",
+            "use_featured_image": "",
+            "insert_into_item": "Insert into hearing",
+            "uploaded_to_this_item": "Uploaded to this hearing",
+            "filter_items_list": "Filter hearings list",
+            "filter_by_date": "Filter hearings by date",
+            "items_list_navigation": "Hearings list navigation",
+            "items_list": "Hearings list",
+            "item_published": "Hearing published.",
+            "item_published_privately": "Hearing published privately.",
+            "item_reverted_to_draft": "Hearing reverted to draft.",
+            "item_scheduled": "Hearing scheduled.",
+            "item_updated": "Hearing updated.",
+            "item_link": "Hearing Link",
+            "item_link_description": "A link to a hearing."
+        },
+        "description": "",
+        "public": true,
+        "hierarchical": false,
+        "exclude_from_search": false,
+        "publicly_queryable": true,
+        "show_ui": true,
+        "show_in_menu": true,
+        "admin_menu_parent": "",
+        "show_in_admin_bar": true,
+        "show_in_nav_menus": true,
+        "show_in_rest": true,
+        "rest_base": "",
+        "rest_namespace": "wp\/v2",
+        "rest_controller_class": "WP_REST_Posts_Controller",
+        "menu_position": "",
+        "menu_icon": {
+            "type": "dashicons",
+            "value": "dashicons-bank"
+        },
+        "rename_capabilities": false,
+        "singular_capability_name": "post",
+        "plural_capability_name": "posts",
+        "supports": [
+            "title",
+            "editor",
+            "thumbnail",
+            "custom-fields"
+        ],
+        "taxonomies": "",
+        "has_archive": true,
+        "has_archive_slug": "hearings",
+        "rewrite": {
+            "permalink_rewrite": "custom_permalink",
+            "slug": "hearings",
+            "with_front": "1",
+            "feeds": "0",
+            "pages": "1"
+        },
+        "query_var": "post_type_key",
+        "query_var_name": "",
+        "can_export": true,
+        "delete_with_user": false,
+        "register_meta_box_cb": "",
+        "enter_title_here": ""
+    },
+    {
+        "key": "post_type_691a72f5e3622",
+        "title": "Incidents",
+        "menu_order": 0,
+        "active": true,
+        "post_type": "incident",
+        "advanced_configuration": true,
+        "import_source": "",
+        "import_date": "",
+        "labels": {
+            "name": "Incidents",
+            "singular_name": "Incident",
+            "menu_name": "Incidents",
+            "all_items": "All Incidents",
+            "edit_item": "Edit Incident",
+            "view_item": "View Incident",
+            "view_items": "View Incidents",
+            "add_new_item": "Add New Incident",
+            "add_new": "Add New Incident",
+            "new_item": "New Incident",
+            "parent_item_colon": "Parent Incident:",
+            "search_items": "Search Incidents",
+            "not_found": "No incidents found",
+            "not_found_in_trash": "No incidents found in Trash",
+            "archives": "Incident Archives",
+            "attributes": "Incident Attributes",
+            "featured_image": "",
+            "set_featured_image": "",
+            "remove_featured_image": "",
+            "use_featured_image": "",
+            "insert_into_item": "Insert into incident",
+            "uploaded_to_this_item": "Uploaded to this incident",
+            "filter_items_list": "Filter incidents list",
+            "filter_by_date": "Filter incidents by date",
+            "items_list_navigation": "Incidents list navigation",
+            "items_list": "Incidents list",
+            "item_published": "Incident published.",
+            "item_published_privately": "Incident published privately.",
+            "item_reverted_to_draft": "Incident reverted to draft.",
+            "item_scheduled": "Incident scheduled.",
+            "item_updated": "Incident updated.",
+            "item_link": "Incident Link",
+            "item_link_description": "A link to a incident."
+        },
+        "description": "",
+        "public": true,
+        "hierarchical": false,
+        "exclude_from_search": false,
+        "publicly_queryable": true,
+        "show_ui": true,
+        "show_in_menu": true,
+        "admin_menu_parent": "",
+        "show_in_admin_bar": true,
+        "show_in_nav_menus": true,
+        "show_in_rest": true,
+        "rest_base": "",
+        "rest_namespace": "wp\/v2",
+        "rest_controller_class": "WP_REST_Posts_Controller",
+        "menu_position": "",
+        "menu_icon": {
+            "type": "dashicons",
+            "value": "dashicons-clock"
+        },
+        "rename_capabilities": false,
+        "singular_capability_name": "post",
+        "plural_capability_name": "posts",
+        "supports": [
+            "title",
+            "editor",
+            "thumbnail",
+            "custom-fields"
+        ],
+        "taxonomies": "",
+        "has_archive": true,
+        "has_archive_slug": "incidents",
+        "rewrite": {
+            "permalink_rewrite": "custom_permalink",
+            "slug": "incidents",
+            "with_front": "1",
+            "feeds": "0",
+            "pages": "1"
+        },
+        "query_var": "post_type_key",
+        "query_var_name": "",
+        "can_export": true,
+        "delete_with_user": false,
+        "register_meta_box_cb": "",
+        "enter_title_here": ""
+    },
+    {
+        "key": "post_type_691a0d97768b0",
+        "title": "Sightings",
+        "menu_order": 0,
+        "active": true,
+        "post_type": "sighting",
+        "advanced_configuration": true,
+        "import_source": "",
+        "import_date": "",
+        "labels": {
+            "name": "Sightings",
+            "singular_name": "Sighting",
+            "menu_name": "Sightings",
+            "all_items": "All Sightings",
+            "edit_item": "Edit Sighting",
+            "view_item": "View Sighting",
+            "view_items": "View Sightings",
+            "add_new_item": "Add New Sighting",
+            "add_new": "Add New Sighting",
+            "new_item": "New Sighting",
+            "parent_item_colon": "Parent Sighting:",
+            "search_items": "Search Sightings",
+            "not_found": "No sightings found",
+            "not_found_in_trash": "No sightings found in Trash",
+            "archives": "Sighting Archives",
+            "attributes": "Sighting Attributes",
+            "featured_image": "",
+            "set_featured_image": "",
+            "remove_featured_image": "",
+            "use_featured_image": "",
+            "insert_into_item": "Insert into sighting",
+            "uploaded_to_this_item": "Uploaded to this sighting",
+            "filter_items_list": "Filter sightings list",
+            "filter_by_date": "Filter sightings by date",
+            "items_list_navigation": "Sightings list navigation",
+            "items_list": "Sightings list",
+            "item_published": "Sighting published.",
+            "item_published_privately": "Sighting published privately.",
+            "item_reverted_to_draft": "Sighting reverted to draft.",
+            "item_scheduled": "Sighting scheduled.",
+            "item_updated": "Sighting updated.",
+            "item_link": "Sighting Link",
+            "item_link_description": "A link to a sighting."
+        },
+        "description": "",
+        "public": true,
+        "hierarchical": false,
+        "exclude_from_search": false,
+        "publicly_queryable": true,
+        "show_ui": true,
+        "show_in_menu": true,
+        "admin_menu_parent": "",
+        "show_in_admin_bar": true,
+        "show_in_nav_menus": true,
+        "show_in_rest": true,
+        "rest_base": "",
+        "rest_namespace": "wp\/v2",
+        "rest_controller_class": "WP_REST_Posts_Controller",
+        "menu_position": "",
+        "menu_icon": {
+            "type": "dashicons",
+            "value": "dashicons-visibility"
+        },
+        "rename_capabilities": false,
+        "singular_capability_name": "post",
+        "plural_capability_name": "posts",
+        "supports": [
+            "title",
+            "editor",
+            "thumbnail",
+            "custom-fields"
+        ],
+        "taxonomies": "",
+        "has_archive": true,
+        "has_archive_slug": "sightings",
+        "rewrite": {
+            "permalink_rewrite": "custom_permalink",
+            "slug": "sightings",
+            "with_front": "1",
+            "feeds": "0",
+            "pages": "1"
+        },
+        "query_var": "post_type_key",
+        "query_var_name": "",
+        "can_export": true,
+        "delete_with_user": false,
+        "register_meta_box_cb": "",
+        "enter_title_here": ""
+    },
+    {
+        "key": "post_type_691a24664897e",
+        "title": "Whistleblowers",
+        "menu_order": 0,
+        "active": true,
+        "post_type": "whistleblower",
+        "advanced_configuration": true,
+        "import_source": "",
+        "import_date": "",
+        "labels": {
+            "name": "Whistleblowers",
+            "singular_name": "Whistleblower",
+            "menu_name": "Whistleblowers",
+            "all_items": "All Whistleblowers",
+            "edit_item": "Edit Whistleblower",
+            "view_item": "View Whistleblower",
+            "view_items": "View Whistleblowers",
+            "add_new_item": "Add New Whistleblower",
+            "add_new": "Add New Whistleblower",
+            "new_item": "New Whistleblower",
+            "parent_item_colon": "Parent Whistleblower:",
+            "search_items": "Search Whistleblowers",
+            "not_found": "No whistleblowers found",
+            "not_found_in_trash": "No whistleblowers found in Trash",
+            "archives": "Whistleblower Archives",
+            "attributes": "Whistleblower Attributes",
+            "featured_image": "",
+            "set_featured_image": "",
+            "remove_featured_image": "",
+            "use_featured_image": "",
+            "insert_into_item": "Insert into whistleblower",
+            "uploaded_to_this_item": "Uploaded to this whistleblower",
+            "filter_items_list": "Filter whistleblowers list",
+            "filter_by_date": "Filter whistleblowers by date",
+            "items_list_navigation": "Whistleblowers list navigation",
+            "items_list": "Whistleblowers list",
+            "item_published": "Whistleblower published.",
+            "item_published_privately": "Whistleblower published privately.",
+            "item_reverted_to_draft": "Whistleblower reverted to draft.",
+            "item_scheduled": "Whistleblower scheduled.",
+            "item_updated": "Whistleblower updated.",
+            "item_link": "Whistleblower Link",
+            "item_link_description": "A link to a whistleblower."
+        },
+        "description": "",
+        "public": true,
+        "hierarchical": false,
+        "exclude_from_search": false,
+        "publicly_queryable": true,
+        "show_ui": true,
+        "show_in_menu": true,
+        "admin_menu_parent": "",
+        "show_in_admin_bar": true,
+        "show_in_nav_menus": true,
+        "show_in_rest": true,
+        "rest_base": "",
+        "rest_namespace": "wp\/v2",
+        "rest_controller_class": "WP_REST_Posts_Controller",
+        "menu_position": "",
+        "menu_icon": {
+            "type": "dashicons",
+            "value": "dashicons-megaphone"
+        },
+        "rename_capabilities": false,
+        "singular_capability_name": "post",
+        "plural_capability_name": "posts",
+        "supports": [
+            "title",
+            "editor",
+            "thumbnail",
+            "custom-fields"
+        ],
+        "taxonomies": "",
+        "has_archive": true,
+        "has_archive_slug": "whistleblowers",
+        "rewrite": {
+            "permalink_rewrite": "custom_permalink",
+            "slug": "whistleblowers",
+            "with_front": "1",
+            "feeds": "0",
+            "pages": "1"
+        },
+        "query_var": "post_type_key",
+        "query_var_name": "",
+        "can_export": true,
+        "delete_with_user": false,
+        "register_meta_box_cb": "",
+        "enter_title_here": ""
+    }
+]

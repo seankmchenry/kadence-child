@@ -3,10 +3,9 @@
  */
 
 /* Defender */
-table.plugins tr[data-slug="defender-security"] {
-  span.upgrade {
-    display: none;
-  }
+div.frash-notice:has(> .defender),
+table.plugins tr[data-slug="defender-security"] span.upgrade {
+  display: none !important;
 }
 
 /* LiteSpeed */

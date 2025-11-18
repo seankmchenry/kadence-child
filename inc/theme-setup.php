@@ -17,6 +17,7 @@ function uap_show_page_template() {
 }
 // add_action( 'wp_head', 'uap_show_page_template' );
 
+
 /**
  * Remove custom columns added by Yoast SEO plugin
  *
@@ -46,3 +47,14 @@ add_filter( 'manage_edit-whistleblower_columns', 'uap_remove_yoast_seo_columns',
 // taxonomies
 add_filter( 'manage_edit-category_columns', 'uap_remove_yoast_seo_columns', 10, 1 );
 add_filter( 'manage_edit-post_tag_columns', 'uap_remove_yoast_seo_columns', 10, 1 );
+
+
+/**
+ * Add Google Maps API key for ACF
+ */
+function bc_acf_google_maps_key() {
+  if ( get_field( 'google_maps_api_key', 'option' ) ) {
+    acf_update_setting( 'google_api_key', get_field( 'google_maps_api_key', 'option' ) );
+  }
+}
+add_action( 'acf/init', 'bc_acf_google_maps_key' );
