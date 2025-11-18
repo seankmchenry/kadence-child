@@ -2,6 +2,19 @@
  * admin.css
  */
 
+/* Defender */
+table.plugins tr[data-slug="defender-security"] {
+  span.upgrade {
+    display: none;
+  }
+}
+
+/* LiteSpeed */
 #wpadminbar li#wp-admin-bar-litespeed-menu {
+  display: none;
+}
+
+/* Updraft */
+#updraft-wrap .updraft-ad-container {
   display: none;
 }

@@ -12,6 +12,12 @@ Admin Bar
 /*
 Content Area
  */
-body.content-title-style-hide div.content-area {
-	margin-top: 0 !important;
+body.content-title-style-hide {
+  div.content-area {
+	  margin-top: 0 !important;
+  }
+
+  .entry-content-wrap {
+    padding-top: 0;
+  }
 }

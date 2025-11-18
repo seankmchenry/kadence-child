@@ -10,9 +10,8 @@ function uap_show_page_template() {
   if ( !uap_user_is_dev() ) {
     return;
   }
-
   global $template;
-  echo '<pre class="mb0">';
+  echo '<pre style="padding: 1em; margin: 0; font-size: 0.875rem; font-family: monospace;">';
   print_r( $template );
   echo '</pre>';
 }
@@ -31,6 +30,7 @@ function uap_remove_yoast_seo_columns( $columns ) {
   unset( $columns['wpseo-focuskw']);
   unset( $columns['wpseo-links']);
   unset( $columns['wpseo-linked']);
+  // unset( $columns['wpseo-cornerstone']);
   return $columns;
 }
 // post types
