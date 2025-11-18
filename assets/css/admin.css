@@ -2,6 +2,18 @@
  * admin.css
  */
 
+/**
+ * Editor
+ */
+.editor-header .editor-header__back-button {
+  a.has-icon > img {
+    filter: invert(100%);
+  }
+}
+
+/**
+ * Plugins
+ */
 /* Defender */
 div.frash-notice:has(> .defender),
 table.plugins tr[data-slug="defender-security"] span.upgrade {
