@@ -58,3 +58,27 @@ function bc_acf_google_maps_key() {
   }
 }
 add_action( 'acf/init', 'bc_acf_google_maps_key' );
+
+
+/**
+ * Add "DEV" label to admin menu
+ */
+function bc_add_admin_env_label( WP_Admin_Bar $wp_admin_bar ) {
+  if ( !uap_user_is_dev() ) {
+    return;
+  }
+  if ( uap_is_local() ) {
+    $title = '<span style="color: #2bbf26;">DEV</span>';
+  } else {
+    $title = '<span style="color: #f73e4d;">PROD</span>';
+  }
+
+  $wp_admin_bar->add_menu( array(
+    'id' => 'admin-env-label',
+    'parent' => 'top-secondary',
+    'group' => null,
+    'title' => $title,
+    'href' => admin_url(),
+  ) );
+}
+add_action( 'admin_bar_menu', 'bc_add_admin_env_label', 100 );

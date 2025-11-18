@@ -21,3 +21,12 @@ body.content-title-style-hide {
     padding-top: 0;
   }
 }
+
+/*
+Footer
+ */
+.site-footer {
+  .site-middle-footer-wrap > .site-footer-row-container-inner {
+    border-bottom: none;
+  }
+}

@@ -2,8 +2,8 @@
  * admin.css
  */
 
-/**
- * Editor
+/*
+Editor
  */
 .editor-header .editor-header__back-button {
   a.has-icon > img {
@@ -11,8 +11,8 @@
   }
 }
 
-/**
- * Plugins
+/*
+Plugins
  */
 /* Defender */
 div.frash-notice:has(> .defender),
