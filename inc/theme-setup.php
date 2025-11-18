@@ -74,18 +74,18 @@ add_filter( 'manage_edit-post_tag_columns', 'uap_remove_yoast_seo_columns', 10, 
 /**
  * Add Google Maps API key for ACF
  */
-function bc_acf_google_maps_key() {
+function uap_acf_google_maps_key() {
   if ( get_field( 'google_maps_api_key', 'option' ) ) {
     acf_update_setting( 'google_api_key', get_field( 'google_maps_api_key', 'option' ) );
   }
 }
-add_action( 'acf/init', 'bc_acf_google_maps_key' );
+add_action( 'acf/init', 'uap_acf_google_maps_key' );
 
 
 /**
  * Add "DEV" label to admin menu
  */
-function bc_add_admin_env_label( WP_Admin_Bar $wp_admin_bar ) {
+function uap_add_admin_env_label( WP_Admin_Bar $wp_admin_bar ) {
   if ( !uap_user_is_dev() ) {
     return;
   }
@@ -103,4 +103,4 @@ function bc_add_admin_env_label( WP_Admin_Bar $wp_admin_bar ) {
     'href' => admin_url(),
   ) );
 }
-add_action( 'admin_bar_menu', 'bc_add_admin_env_label', 100 );
+add_action( 'admin_bar_menu', 'uap_add_admin_env_label', 100 );
